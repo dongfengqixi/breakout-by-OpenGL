@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\glad.c" />
+    <ClCompile Include="ball_object.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="game_level.cpp" />
+    <ClCompile Include="game_object.cpp" />
+    <ClCompile Include="particle_generator.cpp" />
+    <ClCompile Include="post_processor.CPP" />
+    <ClCompile Include="program.cpp" />
+    <ClCompile Include="resource_manager.cpp" />
+    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="sprite_renderer.cpp" />
+    <ClCompile Include="texture.cpp" />
+    <ClCompile Include="text_renderer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\stb_image.h" />
+    <ClInclude Include="ball_object.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="game_level.h" />
+    <ClInclude Include="game_object.h" />
+    <ClInclude Include="particle_generator.h" />
+    <ClInclude Include="post_processor.h" />
+    <ClInclude Include="power_up.h" />
+    <ClInclude Include="resource_manager.h" />
+    <ClInclude Include="shader.h" />
+    <ClInclude Include="sprite_renderer.h" />
+    <ClInclude Include="texture.h" />
+    <ClInclude Include="text_renderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\resources\levels\four.lvl" />
+    <None Include="..\resources\levels\one.lvl" />
+    <None Include="..\resources\levels\three.lvl" />
+    <None Include="..\resources\levels\two.lvl" />
+    <None Include="shaders\particle.fs" />
+    <None Include="shaders\particle.vs" />
+    <None Include="shaders\post_processing.fs" />
+    <None Include="shaders\post_processing.vs" />
+    <None Include="shaders\sprite.fs" />
+    <None Include="shaders\sprite.vs" />
+    <None Include="shaders\text_2d.fs" />
+    <None Include="shaders\text_2d.vs" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{bd787c7e-8989-483a-abf9-52435d0420bc}</ProjectGuid>
+    <RootNamespace>gamebreakout</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\irrKlang;D:\OPENGL_LEARNING\game_breakout\game_breakout\glm;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glad\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\lib-vc2019;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;D:\OPENGL_LEARNING\game_breakout\game_breakout\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\irrKlang;D:\OPENGL_LEARNING\game_breakout\game_breakout\glm;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glad\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\lib-vc2019;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;D:\OPENGL_LEARNING\game_breakout\game_breakout\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\irrKlang;D:\OPENGL_LEARNING\game_breakout\game_breakout\glm;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glad\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\lib-vc2019;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;D:\OPENGL_LEARNING\game_breakout\game_breakout\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\irrKlang;D:\OPENGL_LEARNING\game_breakout\game_breakout\glm;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glad\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\OPENGL_LEARNING\game_breakout\game_breakout\freetype-2.10.0\include;D:\OPENGL_LEARNING\game_breakout\game_breakout\glfw-3.3.6.bin.WIN64\lib-vc2019;D:\OPENGL_LEARNING\game_breakout\game_breakout\assimp501;D:\OPENGL_LEARNING\game_breakout\game_breakout\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc142-mt.lib;assimp-vc142-mtd.lib;irrKlang.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc142-mt.lib;assimp-vc142-mtd.lib;irrKlang.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc142-mt.lib;assimp-vc142-mtd.lib;irrKlang.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;assimp-vc142-mt.lib;assimp-vc142-mtd.lib;irrKlang.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
